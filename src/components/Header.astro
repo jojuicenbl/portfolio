@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const links = [
   { href: "/#about", label: "About" },
   { href: "/#experiences", label: "Experiences" },
@@ -10,10 +12,15 @@ const links = [
   <div class="flex items-center justify-between">
     <!-- Logo and Profile -->
     <a href="/" class="flex items-center gap-3 group">
-      <img
+      <Image
         src="/self-pic-cropped.jpg"
         alt="Joris Neblai"
-        class="w-12 h-12 rounded-full ring-2 ring-neutral-300 dark:ring-neutral-800 group-hover:ring-indigo-500 transition-all"
+        width={48}
+        height={48}
+        class="rounded-full ring-2 ring-neutral-300 dark:ring-neutral-800 group-hover:ring-indigo-500 transition-all"
+        loading="eager"
+        format="webp"
+        quality={80}
       />
       <span class="font-semibold text-lg">Joris Neblai</span>
     </a>
