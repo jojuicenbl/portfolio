@@ -1,0 +1,14 @@
+---
+const links = [
+  { href: "#about", label: "About" },
+  { href: "#experiences", label: "Experiences" },
+  { href: "#contact", label: "Contact" },
+  { href: "/projects", label: "Projects" }
+];
+---
+<header class="mb-10 flex items-center justify-between">
+  <a href="/" class="font-medium">Joris Neblai</a>
+  <nav class="flex gap-4 text-sm">
+    {links.map(l => <a href={l.href} class="opacity-80 hover:opacity-100">{l.label}</a>)}
+  </nav>
+</header>

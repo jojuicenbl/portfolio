@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+
+const email = "contact@jorisneblai.xyz";
+---
+<BaseLayout>
+  <Header />
+
+  <Section id="about" title="About me">
+    <div class="space-y-3">
+      <p>
+        Full-Stack Web Developer specializing in React, Next.js, and NestJS. I build robust front-end interfaces and scalable back-end APIs, with a strong focus on performance, testing, and developer experience.
+      </p>
+      <p>
+        I operate with an AI-driven development workflow: daily use of agent automation, RAG pipelines, and tool-assisted coding to accelerate delivery while preserving quality.
+      </p>
+      <p class="text-sm opacity-80">
+        Core stack: TypeScript, React/React Native, Next.js, NestJS, PostgreSQL, Redis, AWS, TailwindCSS, Jest, Playwright.
+      </p>
+    </div>
+  </Section>
+
+  <Section id="experiences" title="Experiences">
+    <ul class="space-y-4">
+      <li>
+        <div class="flex items-baseline justify-between gap-4">
+          <strong>Full-Stack Web Developer — HARVY</strong>
+          <span class="text-sm opacity-70">Sept 2023 – Feb 2025</span>
+        </div>
+        <ul class="list-disc ml-5 mt-2 space-y-1">
+          <li>Developed and optimized NestJS REST APIs for performance and scalability.</li>
+          <li>Built a PDF generation service (Puppeteer, pdf-lib, Handlebars) processing 1,000+ documents per month.</li>
+          <li>Jest unit and Playwright end-to-end tests reaching ~90% coverage; improved CI quality gates.</li>
+          <li>Implemented Datadog for error tracking, reducing average resolution time.</li>
+          <li>Contributed to product decisions in close collaboration with founders.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="flex items-baseline justify-between gap-4">
+          <strong>Front-End Developer — PUBLIDATA</strong>
+          <span class="text-sm opacity-70">Jan 2023 – Jul 2023</span>
+        </div>
+        <ul class="list-disc ml-5 mt-2 space-y-1">
+          <li>Shipped new React features and reusable components; authored custom hooks to improve maintainability.</li>
+          <li>Enhanced UI with TailwindCSS; improved mobile experience and reduced bundle size via lazy loading/code-splitting.</li>
+          <li>Set up Storybook documentation to streamline onboarding; active in code reviews and pair programming.</li>
+          <li>Contributed to a React Native app used by 500+ B2B customers.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="flex items-baseline justify-between gap-4">
+          <strong>Technical Specialist — APPLE</strong>
+          <span class="text-sm opacity-70">Jun 2016 – Dec 2019</span>
+        </div>
+        <ul class="list-disc ml-5 mt-2 space-y-1">
+          <li>Diagnosed and repaired complex hardware/software issues at scale; trained new technicians.</li>
+          <li>Delivered 500+ advanced diagnostics and repairs per year; maintained high service quality.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="flex items-baseline justify-between gap-4">
+          <strong>Web & Mobile Web Developer Training (JS/React) — O'Clock</strong>
+          <span class="text-sm opacity-70">May 2022 – Oct 2022</span>
+        </div>
+        <ul class="list-disc ml-5 mt-2 space-y-1">
+          <li>700+ hours bootcamp covering HTML, CSS, JS, React, accessibility, SEO, Agile, TDD, and documentation.</li>
+          <li>Built a full-stack final project from design to deployment.</li>
+        </ul>
+      </li>
+    </ul>
+  </Section>
+
+  <Section id="contact" title="Contact">
+    <form class="space-y-3" action={`mailto:${email}`} method="post" enctype="text/plain">
+      <div>
+        <label class="block text-sm mb-1" for="name">Name</label>
+        <input id="name" name="name" required class="w-full border rounded-lg px-3 py-2" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="email">Email</label>
+        <input id="email" type="email" name="email" required class="w-full border rounded-lg px-3 py-2" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full border rounded-lg px-3 py-2"></textarea>
+      </div>
+      <button type="submit" class="inline-flex items-center rounded-lg border px-4 py-2">Send</button>
+    </form>
+
+    <div class="mt-6 flex gap-4 text-sm">
+      <a class="underline" href="https://linkedin.com/in/joris-neblai" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="underline" href="https://github.com/jojuicenbl" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="underline" href={`mailto:${email}`}>{email}</a>
+      <a class="underline" href="/projects">Projects →</a>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>
