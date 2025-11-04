@@ -7,13 +7,13 @@ interface Props {
 
 const { title, description, url } = Astro.props;
 ---
-<article class="group border border-neutral-800 rounded-xl p-6 hover:border-indigo-500/50 transition-all bg-neutral-900/30 hover:bg-neutral-900/50 backdrop-blur-sm">
-  <h3 class="font-semibold text-lg group-hover:text-indigo-400 transition-colors">{title}</h3>
-  <p class="mt-2 text-sm text-neutral-400 leading-relaxed">{description}</p>
+<article class="group border border-neutral-200 dark:border-neutral-800 rounded-xl p-6 hover:border-indigo-500/50 transition-all bg-neutral-50 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-900/50 backdrop-blur-sm">
+  <h3 class="font-semibold text-lg text-neutral-900 dark:text-neutral-100 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">{title}</h3>
+  <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{description}</p>
   {url && (
     <a
       href={url}
-      class="mt-4 inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
+      class="mt-4 inline-flex items-center gap-2 text-sm text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
       target="_blank"
       rel="noopener noreferrer"
     >
