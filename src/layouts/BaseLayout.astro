@@ -18,15 +18,15 @@ const { title = "Joris Neblai — Portfolio", description = "Full-Stack Web Deve
     <link rel="icon" href="/icons/favicon.svg" />
     <!-- Theme initialization script - must run before render to prevent flicker -->
     <script is:inline>
-      (function() {
-        const theme = localStorage.getItem('theme') || 'dark';
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      })();
-    </script>
+  (function() {
+    try {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const enableDark = saved ? saved === 'dark' : prefersDark;
+      if (enableDark) document.documentElement.classList.add('dark');
+    } catch {}
+  })();
+</script>
   </head>
   <body class="bg-white dark:bg-[#121212] text-neutral-900 dark:text-neutral-100 antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300">
     <main class="container max-w-4xl px-4 py-10 min-h-screen">
