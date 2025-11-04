@@ -8,18 +8,24 @@ interface Props {
 
 const { title = "Joris Neblai — Portfolio", description = "Full-Stack Web Developer" } = Astro.props;
 ---
-<html lang="en" x-data="{ darkMode: true }" x-bind:class="{ 'dark': darkMode }">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/icons/favicon.svg" />
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Theme initialization script - must run before render to prevent flicker -->
     <script is:inline>
-      // Initialize theme from localStorage or default to dark
-      const theme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
     </script>
   </head>
   <body class="bg-white dark:bg-[#121212] text-neutral-900 dark:text-neutral-100 antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300">
