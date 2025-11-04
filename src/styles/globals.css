@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light dark; }
+:root { color-scheme: dark; }
 html { scroll-behavior: smooth; }
+
+@layer base {
+  body {
+    background: #121212;
+    color: rgb(245, 245, 245);
+  }
+}

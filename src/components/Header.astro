@@ -1,14 +1,36 @@
 ---
+const { pathname } = Astro.url;
+const isHome = pathname === '/';
+
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#experiences", label: "Experiences" },
-  { href: "#contact", label: "Contact" },
-  { href: "/projects", label: "Projects" }
+  { href: isHome ? "#about" : "/#about", label: "About" },
+  { href: isHome ? "#experiences" : "/#experiences", label: "Experiences" },
+  { href: isHome ? "#contact" : "/#contact", label: "Contact" },
+  { href: "/projects", label: "Projects", isHighlight: true }
 ];
 ---
-<header class="mb-10 flex items-center justify-between">
-  <a href="/" class="font-medium">Joris Neblai</a>
-  <nav class="flex gap-4 text-sm">
-    {links.map(l => <a href={l.href} class="opacity-80 hover:opacity-100">{l.label}</a>)}
+<header class="mb-12 flex items-center justify-between border-b border-neutral-800 pb-6">
+  <a href="/" class="flex items-center gap-3 group">
+    <img src="/profile.svg" alt="Joris Neblai" class="w-12 h-12 rounded-full ring-2 ring-neutral-800 group-hover:ring-indigo-500 transition-all" />
+    <span class="font-semibold text-lg">Joris Neblai</span>
+  </a>
+  <nav class="flex gap-1 text-sm">
+    {links.map(l => (
+      l.isHighlight ? (
+        <a
+          href={l.href}
+          class="px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/20"
+        >
+          {l.label}
+        </a>
+      ) : (
+        <a
+          href={l.href}
+          class="px-4 py-2 rounded-lg opacity-70 hover:opacity-100 hover:bg-neutral-800/50 transition-all"
+        >
+          {l.label}
+        </a>
+      )
+    ))}
   </nav>
 </header>
