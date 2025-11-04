@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Section from "../components/Section.astro";
 
-const email = "contact@jorisneblai.xyz";
+const email = import.meta.env.PUBLIC_EMAIL;
 ---
 <BaseLayout>
   <Header />
