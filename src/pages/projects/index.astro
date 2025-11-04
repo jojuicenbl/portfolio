@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { projects } from "../../data/projects";
+---
+<BaseLayout title="Projects — Joris Neblai" description="Personal projects by Joris Neblai">
+  <Header />
+
+  <div class="mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+      Projects
+    </h1>
+    <p class="text-neutral-600 dark:text-neutral-400 text-lg">
+      A collection of side projects and experiments. More coming soon.
+    </p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    {projects.map(p => <ProjectCard {...p} />)}
+  </div>
+
+  <Footer />
+</BaseLayout>
