@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jorisneblai.xyz/sitemap-index.xml
