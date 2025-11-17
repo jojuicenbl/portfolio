@@ -27,7 +27,7 @@ const { title = "Joris Neblai — Portfolio", description = "Full-Stack Web Deve
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@jeewicee" />
     <link rel="canonical" href="https://jorisneblai.xyz/" />
-    <link rel="icon" href="/icons/favicon.svg" />
+    <link rel="icon" href="/icons/favicon.png" />
     <!-- Theme initialization script - must run before render to prevent flicker -->
     <script is:inline>
   (function() {
@@ -40,8 +40,8 @@ const { title = "Joris Neblai — Portfolio", description = "Full-Stack Web Deve
   })();
 </script>
   </head>
-  <body class="bg-white dark:bg-[#121212] text-neutral-900 dark:text-neutral-100 antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300">
-    <main class="container max-w-4xl px-4 py-10 min-h-screen">
+  <body class="antialiased selection:bg-[var(--color-accent)] selection:text-black transition-colors duration-200">
+    <main class="container max-w-6xl px-6 py-8 md:py-12 min-h-screen">
       <slot />
     </main>
   </body>

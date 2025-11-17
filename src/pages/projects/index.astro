@@ -8,16 +8,20 @@ import { projects } from "../../data/projects";
 <BaseLayout title="Projects — Joris Neblai" description="Personal projects by Joris Neblai">
   <Header />
 
-  <div class="mb-12">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-      Projects
-    </h1>
-    <p class="text-neutral-600 dark:text-neutral-400 text-lg">
-      A collection of side projects and experiments. More coming soon.
+  <div class="mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
+    <div class="relative">
+      <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
+        <span class="block">My</span>
+        <span class="block text-[var(--color-accent)]">Projects</span>
+      </h1>
+      <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
+    </div>
+    <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6">
+      <span class="text-[var(--color-accent)]">&gt;</span> A collection of side projects and experiments. More coming soon.
     </p>
   </div>
 
-  <div class="grid gap-6 md:grid-cols-2">
+  <div class="grid gap-6 md:grid-cols-2 opacity-0 animate-fade-in-up delay-400">
     {projects.map(p => <ProjectCard {...p} />)}
   </div>
 
