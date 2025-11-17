@@ -1,8 +1,18 @@
 ---
 ---
-<footer class="mt-20 pt-8 border-t border-neutral-300 dark:border-neutral-800 text-sm text-neutral-600 dark:text-neutral-400">
-  <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
-    <p>© {new Date().getFullYear()} Joris Neblai</p>
-    <p class="text-xs opacity-70">Built with Astro & TailwindCSS</p>
+<footer class="mt-20 md:mt-32 pt-6 md:pt-8 border-t-2 border-[var(--color-border-light)] text-sm font-mono">
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="text-[var(--color-text-secondary)]">©</span>
+      <span class="font-semibold">{new Date().getFullYear()}</span>
+      <span class="text-[var(--color-accent)] font-semibold">Joris Neblai</span>
+    </div>
+    <div class="flex items-center gap-2 text-xs text-[var(--color-text-secondary)]">
+      <span>&gt;</span>
+      <span>Built with</span>
+      <span class="text-[var(--color-accent)] font-semibold">Astro</span>
+      <span>+</span>
+      <span class="text-[var(--color-accent)] font-semibold">Tailwind</span>
+    </div>
   </div>
 </footer>

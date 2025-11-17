@@ -2,113 +2,110 @@
 import { Image } from 'astro:assets';
 
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#experiences", label: "Experiences" },
-  { href: "/contact", label: "Contact" },
-  { href: "/projects", label: "Projects", isHighlight: true }
+  { href: "/#about", label: "about" },
+  { href: "/#experiences", label: "work" },
+  { href: "/contact", label: "contact" },
+  { href: "/projects", label: "projects", isHighlight: false }
 ];
 ---
-<header class="mb-12 border-b border-neutral-300 dark:border-neutral-800 pb-6 transition-colors">
-  <div class="flex items-center justify-between">
+<header class="mb-12 md:mb-16 border-b-2 border-[var(--color-border-light)] pb-6 md:pb-8 opacity-0 animate-fade-in-up">
+  <div class="flex items-center justify-between flex-wrap gap-3 md:gap-4">
     <!-- Logo and Profile -->
-    <a href="/" class="flex items-center gap-3 group">
-      <Image
-        src="/self-pic-cropped.jpg"
-        alt="Joris Neblai"
-        width={48}
-        height={48}
-        class="rounded-full ring-2 ring-neutral-300 dark:ring-neutral-800 group-hover:ring-indigo-500 transition-all"
-        loading="eager"
-        format="webp"
-        quality={95}
-        densities={[1, 2]}
-      />
-      <span class="font-semibold text-lg">Joris Neblai</span>
+    <a href="/" class="flex items-center gap-3 group relative">
+      <div class="relative">
+        <Image
+          src="/self-pic-grad.png"
+          alt="Joris Neblai"
+          width={48}
+          height={48}
+          class="rounded-md border-2 border-[var(--color-border-light)] group-hover:border-[var(--color-accent)] transition-all duration-200"
+          loading="eager"
+          format="webp"
+          quality={95}
+          densities={[1, 2]}
+        />
+        <div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-sm bg-[var(--color-accent)]"></div>
+      </div>
+      <div>
+        <span class="font-display font-bold text-lg md:text-xl block">Joris Neblai</span>
+        <span class="text-[10px] md:text-xs text-[var(--color-text-secondary)] font-mono">&gt; full-stack dev</span>
+      </div>
     </a>
 
     <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center gap-2">
-      <nav class="flex gap-1 text-sm">
+      <nav class="flex gap-1.5 text-sm font-mono">
         {links.map(l => (
-          l.isHighlight ? (
             <a
               href={l.href}
-              class="px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/20"
+              class="px-4 py-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200 capitalize"
             >
               {l.label}
             </a>
-          ) : (
-            <a
-              href={l.href}
-              class="px-4 py-2 rounded-lg opacity-70 hover:opacity-100 hover:bg-neutral-200 dark:hover:bg-neutral-800/50 transition-all"
-            >
-              {l.label}
-            </a>
-          )
         ))}
       </nav>
 
       <!-- Theme Toggle Desktop -->
       <button
         id="theme-toggle-desktop"
-        class="ml-2 p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800/50 transition-all"
+        class="ml-2 p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
         aria-label="Toggle theme"
       >
-        <svg id="sun-icon-desktop" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        <svg id="sun-icon-desktop" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="square" stroke-linejoin="miter" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
-        <svg id="moon-icon-desktop" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        <svg id="moon-icon-desktop" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="square" stroke-linejoin="miter" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
     </div>
 
-    <!-- Mobile Menu Button -->
+    <!-- Mobile Menu Controls -->
     <div class="flex md:hidden items-center gap-2">
       <!-- Theme Toggle Mobile -->
       <button
         id="theme-toggle-mobile"
-        class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800/50 transition-all"
+        class="p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
         aria-label="Toggle theme"
       >
-        <svg id="sun-icon-mobile" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        <svg id="sun-icon-mobile" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
-        <svg id="moon-icon-mobile" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        <svg id="moon-icon-mobile" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
 
       <!-- Burger Menu Button -->
       <button
         id="mobile-menu-button"
-        class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800/50 transition-all"
+        class="p-2 rounded-md border-2 border-[var(--color-border-light)] hover:border-[var(--color-border)] transition-all duration-200"
         aria-label="Toggle menu"
       >
-        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-neutral-300 dark:border-neutral-800 flex-col gap-2">
+  <nav id="mobile-menu" class="hidden md:hidden mt-5 pt-5 border-t-2 border-[var(--color-border-light)] flex-col gap-2">
     {links.map(l => (
       l.isHighlight ? (
         <a
           href={l.href}
-          class="px-4 py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-center block"
+          class="px-4 py-3 rounded-md bg-[var(--color-accent)] text-white font-semibold border-2 border-[var(--color-accent)] text-center block capitalize font-mono text-sm"
         >
           {l.label}
         </a>
       ) : (
         <a
           href={l.href}
-          class="px-4 py-3 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800/50 transition-all text-center block"
+          class="px-4 py-3 rounded-md border-2 border-[var(--color-border-light)] hover:border-[var(--color-border)] hover:bg-[var(--color-bg-secondary)] transition-all text-center block capitalize font-mono text-sm"
         >
           {l.label}
         </a>
