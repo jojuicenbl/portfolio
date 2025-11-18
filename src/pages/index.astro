@@ -7,62 +7,96 @@ import Section from "../components/Section.astro";
 <BaseLayout>
   <Header />
 
+  <!-- Hero Section -->
+  <div class="mb-16 md:mb-24 opacity-0 animate-fade-in-up delay-200">
+    <div class="relative">
+      <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
+        <span class="block">Full-Stack</span>
+        <span class="block text-[var(--color-accent)]">Developer</span>
+      </h1>
+      <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
+    </div>
+    <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6 md:mt-8 leading-relaxed">
+      <span class="text-[var(--color-accent)]">&gt;</span> Freelance Full-Stack & AI Engineer. I build intelligent applications, AI agents, scalable APIs, and high-quality web experiences — fast.
+    </p>
+  </div>
+
   <Section id="about" title="About me">
-    <div class="space-y-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
-      <p class="text-lg">
-        Full-Stack Web Developer specializing in React, Next.js, and NestJS. I build robust front-end interfaces and scalable back-end APIs, with a strong focus on performance, testing, and developer experience.
-      </p>
-      <p class="text-lg">
-        I operate with an AI-driven development workflow: daily use of agent automation, RAG pipelines, and tool-assisted coding to accelerate delivery while preserving quality.
-      </p>
-      <p class="text-lg">
-        Beyond engineering, I'm deeply into music and vinyl record collecting, always exploring new sounds and timeless classics. I stay active through regular running and strength training, and I keep a constant eye on emerging AI technologies.
-      </p>
-      <div class="mt-6 p-4 rounded-lg bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800">
-        <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          <span class="font-semibold text-indigo-500 dark:text-indigo-400">Core stack:</span> TypeScript, React/React Native, Next.js, NestJS, PostgreSQL, Redis, AWS, TailwindCSS, Jest, Playwright.
+    <div class="space-y-5 md:space-y-6 font-mono text-sm md:text-base leading-relaxed">
+      <div class="border-l-2 border-[var(--color-accent)] pl-2 md:pl-6 py-1">
+        <p class="text-[var(--color-text-secondary)]">
+          I'm a <strong>Freelance Full-Stack Developer & AI Engineer</strong> helping companies build fast, reliable and intelligent digital products. I specialize in turning ideas into production-ready solutions using <strong>JavaScript/TypeScript</strong>, <strong>Python</strong>, and modern <strong>AI-driven development</strong> workflows.
+        </p>
+      </div>
+
+      <div class="border-l-2 border-[var(--color-border-light)] pl-2 md:pl-6 py-1">
+        <p class="text-[var(--color-text-secondary)]">
+          My work spans <strong>AI agents</strong>, <strong>RAG pipelines</strong>, <strong>automated workflows</strong>, and <strong>full-stack web applications</strong>. I integrate tools like <strong>OpenAI, Anthropic, LangChain, Ollama, vector databases</strong> and modern cloud deployments to accelerate development without compromising quality.
+        </p>
+      </div>
+
+      <div class="border-l-2 border-[var(--color-accent)] pl-2 md:pl-6 py-1">
+        <p class="text-[var(--color-text-secondary)]">
+          I also build performant websites and e-commerce experiences using <strong>WordPress</strong> (custom themes & plugins) and <strong>Shopify</strong> with advanced <strong>Liquid customization</strong>.
+        </p>
+      </div>
+
+      <div class="py-1">
+        <p class="border-l-2 border-[var(--color-border-light)] pl-2 md:pl-6 text-[var(--color-text-secondary)]">
+          Outside of engineering, I’m passionate about music and vinyl collection, always digging for new sounds. I stay active through running and strength training, and I'm constantly experimenting with emerging AI technologies.
+        </p>
+      </div>
+
+      <div class="mt-6 md:mt-8 p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] relative">
+        <div class="absolute top-0 left-0 w-16 h-1 bg-[var(--color-accent)] rounded-tl-lg"></div>
+        <p class="text-xs font-semibold mb-3 text-[var(--color-text-secondary)]">
+          <span class="text-[var(--color-accent)]">//</span> Core Stack
+        </p>
+        <p class="text-sm leading-relaxed">
+          JavaScript/TypeScript, Python (FastAPI, LangChain), React, Next.js, Node.js, AI agents, LLM integrations, RAG, vector DBs, Docker, CI/CD, AWS, Vercel, Shopify (Liquid), WordPress.
         </p>
       </div>
     </div>
   </Section>
 
   <Section id="experiences" title="Experiences">
-    <ul class="space-y-6">
-      <li class="border-l-2 border-indigo-500 pl-4 py-2">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-          <strong class="text-lg text-neutral-900 dark:text-neutral-100">Full-Stack Web Developer — HARVY</strong>
-          <span class="text-sm text-neutral-600 dark:text-neutral-500">Sept 2023 – Feb 2025</span>
+    <ul class="space-y-6 md:space-y-8">
+      <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
+        <div class="absolute top-0 left-0 w-1 h-16 bg-[var(--color-accent)] rounded-tl-lg"></div>
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+          <strong class="font-display text-lg md:text-xl">Full-Stack Web Developer — <span class="text-[var(--color-accent)]">HARVY</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Sept 2023 – Feb 2025</span>
         </div>
-        <ul class="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300 marker:text-indigo-500">
-          <li>Developed and optimized NestJS REST APIs for performance and scalability.</li>
-          <li>Built a PDF generation service (Puppeteer, pdf-lib, Handlebars) processing 1,000+ documents per month.</li>
-          <li>Jest unit and Playwright end-to-end tests reaching ~90% coverage; improved CI quality gates.</li>
-          <li>Implemented Datadog for error tracking, reducing average resolution time.</li>
-          <li>Contributed to product decisions in close collaboration with founders.</li>
+        <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Developed and optimized NestJS REST APIs for performance and scalability.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Built a PDF generation service (Puppeteer, pdf-lib, Handlebars) processing 1,000+ documents per month.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Jest unit and Playwright end-to-end tests reaching ~90% coverage; improved CI quality gates.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Implemented Datadog for error tracking, reducing average resolution time.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contributed to product decisions in close collaboration with founders.</span></li>
         </ul>
       </li>
 
-      <li class="border-l-2 border-purple-500 pl-4 py-2">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-          <strong class="text-lg text-neutral-900 dark:text-neutral-100">Front-End Developer — PUBLIDATA</strong>
-          <span class="text-sm text-neutral-600 dark:text-neutral-500">Jan 2023 – Jul 2023</span>
+      <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+          <strong class="font-display text-lg md:text-xl">Front-End Developer — <span class="text-[var(--color-accent)]">PUBLIDATA</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Jan 2023 – Jul 2023</span>
         </div>
-        <ul class="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300 marker:text-purple-500">
-          <li>Shipped new React features and reusable components; authored custom hooks to improve maintainability.</li>
-          <li>Enhanced UI with TailwindCSS; improved mobile experience and reduced bundle size via lazy loading/code-splitting.</li>
-          <li>Set up Storybook documentation to streamline onboarding; active in code reviews and pair programming.</li>
-          <li>Contributed to a React Native app used by 500+ B2B customers.</li>
+        <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Shipped new React features and reusable components; authored custom hooks to improve maintainability.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Enhanced UI with TailwindCSS; improved mobile experience and reduced bundle size via lazy loading/code-splitting.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Set up Storybook documentation to streamline onboarding; active in code reviews and pair programming.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contributed to a React Native app used by 500+ B2B customers.</span></li>
         </ul>
       </li>
 
-      <li class="border-l-2 border-purple-500 pl-4 py-2">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-          <strong class="text-lg text-neutral-900 dark:text-neutral-100">Technical Specialist — APPLE</strong>
-          <span class="text-sm text-neutral-600 dark:text-neutral-500">Jun 2016 – Dec 2019</span>
+      <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+          <strong class="font-display text-lg md:text-xl">Technical Specialist — <span class="text-[var(--color-accent)]">APPLE</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Jun 2016 – Dec 2019</span>
         </div>
-        <ul class="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300 marker:text-purple-500">
-          <li>Diagnosed and repaired complex hardware/software issues at scale; trained new technicians.</li>
-          <li>Delivered 500+ advanced diagnostics and repairs per year; maintained high service quality.</li>
+        <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Diagnosed and repaired complex hardware/software issues at scale; trained new technicians.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Delivered 500+ advanced diagnostics and repairs per year; maintained high service quality.</span></li>
         </ul>
       </li>
     </ul>
@@ -70,64 +104,76 @@ import Section from "../components/Section.astro";
 
   <Section id="education" title="Education">
     <ul class="space-y-6">
-      <li class="border-l-2 border-indigo-500 pl-4 py-2">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-          <strong class="text-lg text-neutral-900 dark:text-neutral-100">Web & Mobile Web Developer Training (JS/React) — O'Clock</strong>
-          <span class="text-sm text-neutral-600 dark:text-neutral-500">May 2022 – Oct 2022</span>
+      <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
+        <div class="absolute top-0 left-0 w-1 h-16 bg-[var(--color-accent)] rounded-tl-lg"></div>
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+          <strong class="font-display text-lg md:text-xl">Web & Mobile Web Developer Training (JS/React) — <span class="text-[var(--color-accent)]">O'Clock</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">May 2022 – Oct 2022</span>
         </div>
-        <ul class="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300 marker:text-indigo-500">
-          <li>700+ hours bootcamp covering HTML, CSS, JS, React, accessibility, SEO, Agile, TDD, and documentation.</li>
-          <li>Built a full-stack final project from design to deployment.</li>
+        <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>700+ hours bootcamp covering HTML, CSS, JS, React, accessibility, SEO, Agile, TDD, and documentation.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Built a full-stack final project from design to deployment.</span></li>
         </ul>
       </li>
     </ul>
   </Section>
 
   <!-- Get in Touch CTA -->
-  <div class="mt-20 p-8 md:p-12 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-600/10 border border-indigo-500/20 dark:border-indigo-500/30">
-    <div class="text-center max-w-2xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-        Let's work together
-      </h2>
-      <p class="text-neutral-600 dark:text-neutral-400 mb-8 text-lg">
-        Have a project in mind or just want to chat? I'm always open to discussing new opportunities and ideas.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-          </svg>
-          Send a message
-        </a>
-        <div class="flex gap-3">
+  <div class="mt-20 md:mt-32 relative opacity-0 animate-fade-in-up delay-400">
+    <div class="rounded-xl border-2 border-[var(--color-border-light)] p-6 md:p-12 bg-[var(--color-bg-secondary)] relative overflow-hidden hover:border-[var(--color-accent)] transition-colors duration-200">
+      <!-- Decorative elements -->
+      <div class="absolute top-0 left-0 w-20 h-1 bg-[var(--color-accent)] rounded-tl-xl"></div>
+
+      <div class="relative z-10">
+        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl mb-5 md:mb-6 leading-tight">
+          <span class="block">Let's work</span>
+          <span class="block text-[var(--color-accent)]">together</span>
+        </h2>
+        <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] mb-8 md:mb-10 max-w-2xl">
+          <span class="text-[var(--color-accent)]">&gt;</span> Need help building an AI-powered product, automating a workflow, or developing a scalable web application? 
+  I’m available for freelance missions — from rapid prototypes to full production builds.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 md:gap-4 items-start">
           <a
-            href="https://linkedin.com/in/joris-neblai"
-            target="_blank"
-            rel="noreferrer"
-            class="p-3 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-indigo-500 transition-all"
-            aria-label="LinkedIn"
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-lg bg-[var(--color-accent)] text-white font-mono font-bold capitalize border-2 border-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] hover:border-[var(--color-accent-dark)] transition-all duration-200 w-full sm:w-auto"
           >
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
+            <span>Send message</span>
           </a>
-          <a
-            href="https://github.com/jojuicenbl"
-            target="_blank"
-            rel="noreferrer"
-            class="p-3 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-indigo-500 transition-all"
-            aria-label="GitHub"
-          >
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-          </a>
+
+          <div class="flex gap-3 w-full sm:w-auto">
+            <a
+              href="https://linkedin.com/in/joris-neblai"
+              target="_blank"
+              rel="noreferrer"
+              class="flex-1 sm:flex-none p-3 rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] hover:bg-[var(--color-bg)] transition-all duration-200"
+              aria-label="LinkedIn"
+            >
+              <svg class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a
+              href="https://github.com/jojuicenbl"
+              target="_blank"
+              rel="noreferrer"
+              class="flex-1 sm:flex-none p-3 rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] hover:bg-[var(--color-bg)] transition-all duration-200"
+              aria-label="GitHub"
+            >
+              <svg class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+
+      <div class="absolute bottom-0 right-0 w-2 h-2 rounded-sm bg-[var(--color-accent)]"></div>
     </div>
   </div>
 
