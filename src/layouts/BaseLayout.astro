@@ -4,12 +4,17 @@ import '../styles/globals.css';
 interface Props {
   title?: string;
   description?: string;
+  locale?: 'en' | 'fr';
 }
 
-const { title = "Joris Neblai — Portfolio", description = "Full-Stack Web Developer" } = Astro.props;
+const {
+  title = "Joris Neblai — Portfolio",
+  description = "Full-Stack Web Developer",
+  locale = "en"
+} = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />

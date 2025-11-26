@@ -1,120 +1,120 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Section from "../components/Section.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Section from "../../components/Section.astro";
 
-const locale = "en";
+const locale = "fr";
 ---
-<BaseLayout locale={locale}>
+<BaseLayout locale={locale} title="Joris Neblai — Portfolio" description="Développeur Web Full-Stack">
   <Header locale={locale} />
 
   <!-- Hero Section -->
   <div class="mb-16 md:mb-24 opacity-0 animate-fade-in-up delay-200">
     <div class="relative">
       <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
-        <span class="block">Full-Stack</span>
-        <span class="block text-[var(--color-accent)]">Developer</span>
+        <span class="block">Développeur</span>
+        <span class="block text-[var(--color-accent)]">Full-Stack</span>
       </h1>
       <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
     </div>
     <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6 md:mt-8 leading-relaxed">
-      <span class="text-[var(--color-accent)]">&gt;</span> Freelance Full-Stack & AI Engineer. I build intelligent applications, AI agents, scalable APIs, and high-quality web experiences — fast.
+      <span class="text-[var(--color-accent)]">&gt;</span> Freelance Full-Stack & Ingénieur IA. Je développe des applications intelligentes, des agents IA, des APIs scalables et des expériences web de qualité — rapidement.
     </p>
   </div>
 
-  <Section id="about" title="About me">
+  <Section id="about" title="À propos">
     <div class="space-y-5 md:space-y-6 font-mono text-sm md:text-base leading-relaxed">
       <div class="border-l-2 border-[var(--color-accent)] pl-2 md:pl-6 py-1">
         <p class="text-[var(--color-text-secondary)]">
-          I'm a <strong>Freelance Full-Stack Developer & AI Engineer</strong> helping companies build fast, reliable and intelligent digital products. I specialize in turning ideas into production-ready solutions using <strong>JavaScript/TypeScript</strong>, <strong>Python</strong>, and modern <strong>AI-driven development</strong> workflows.
+          Je suis <strong>Développeur Full-Stack & Ingénieur IA Freelance</strong>, aidant les entreprises à créer des produits numériques rapides, fiables et intelligents. Je me spécialise dans la transformation d'idées en solutions prêtes pour la production avec <strong>JavaScript/TypeScript</strong>, <strong>Python</strong>, et des workflows de <strong>développement assisté par IA</strong> modernes.
         </p>
       </div>
 
       <div class="border-l-2 border-[var(--color-border-light)] pl-2 md:pl-6 py-1">
         <p class="text-[var(--color-text-secondary)]">
-          My work spans <strong>AI agents</strong>, <strong>RAG pipelines</strong>, <strong>automated workflows</strong>, and <strong>full-stack web applications</strong>. I integrate tools like <strong>OpenAI, Anthropic, LangChain, Ollama, vector databases</strong> and modern cloud deployments to accelerate development without compromising quality.
+          Mon travail couvre les <strong>agents IA</strong>, les <strong>pipelines RAG</strong>, les <strong>workflows automatisés</strong>, et les <strong>applications web full-stack</strong>. J'intègre des outils comme <strong>OpenAI, Anthropic, LangChain, Ollama, des bases de données vectorielles</strong> et des déploiements cloud modernes pour accélérer le développement sans compromettre la qualité.
         </p>
       </div>
 
       <div class="border-l-2 border-[var(--color-accent)] pl-2 md:pl-6 py-1">
         <p class="text-[var(--color-text-secondary)]">
-          I also build performant websites and e-commerce experiences using <strong>WordPress</strong> (custom themes & plugins) and <strong>Shopify</strong> with advanced <strong>Liquid customization</strong>.
+          Je construis également des sites performants et des expériences e-commerce avec <strong>WordPress</strong> (thèmes et plugins sur mesure) et <strong>Shopify</strong> avec des <strong>personnalisations Liquid</strong> avancées.
         </p>
       </div>
 
       <div class="py-1">
         <p class="border-l-2 border-[var(--color-border-light)] pl-2 md:pl-6 text-[var(--color-text-secondary)]">
-          Outside of engineering, I’m passionate about music and vinyl collection, always digging for new sounds. I stay active through running and strength training, and I'm constantly experimenting with emerging AI technologies.
+          En dehors du développement, je suis passionné de musique et de collection de vinyles, toujours à la recherche de nouveaux sons. Je reste actif grâce à la course à pied et la musculation, et j'expérimente constamment avec les technologies IA émergentes.
         </p>
       </div>
 
       <div class="mt-6 md:mt-8 p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] relative">
         <div class="absolute top-0 left-0 w-16 h-1 bg-[var(--color-accent)] rounded-tl-lg"></div>
         <p class="text-xs font-semibold mb-3 text-[var(--color-text-secondary)]">
-          <span class="text-[var(--color-accent)]">//</span> Core Stack
+          <span class="text-[var(--color-accent)]">//</span> Stack Principal
         </p>
         <p class="text-sm leading-relaxed">
-          JavaScript/TypeScript, Python (FastAPI, LangChain), React, Next.js, Node.js, AI agents, LLM integrations, RAG, vector DBs, Docker, CI/CD, AWS, Vercel, Shopify (Liquid), WordPress.
+          JavaScript/TypeScript, Python (FastAPI, LangChain), React, Next.js, Node.js, agents IA, intégrations LLM, RAG, bases de données vectorielles, Docker, CI/CD, AWS, Vercel, Shopify (Liquid), WordPress.
         </p>
       </div>
     </div>
   </Section>
 
-  <Section id="experiences" title="Experiences">
+  <Section id="experiences" title="Expériences">
     <ul class="space-y-6 md:space-y-8">
       <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
         <div class="absolute top-0 left-0 w-1 h-16 bg-[var(--color-accent)] rounded-tl-lg"></div>
         <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
-          <strong class="font-display text-lg md:text-xl">Full-Stack Web Developer — <span class="text-[var(--color-accent)]">HARVY</span></strong>
-          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Sept 2023 – Feb 2025</span>
+          <strong class="font-display text-lg md:text-xl">Développeur Web Full-Stack — <span class="text-[var(--color-accent)]">HARVY</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Sept 2023 – Fév 2025</span>
         </div>
         <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Developed and optimized NestJS REST APIs for performance and scalability.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Built a PDF generation service (Puppeteer, pdf-lib, Handlebars) processing 1,000+ documents per month.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Jest unit and Playwright end-to-end tests reaching ~90% coverage; improved CI quality gates.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Implemented Datadog for error tracking, reducing average resolution time.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contributed to product decisions in close collaboration with founders.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Développement et optimisation d'APIs REST NestJS pour la performance et la scalabilité.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Création d'un service de génération de PDF (Puppeteer, pdf-lib, Handlebars) traitant plus de 1 000 documents par mois.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Tests unitaires Jest et end-to-end Playwright atteignant ~90% de couverture ; amélioration des contrôles qualité CI.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Mise en place de Datadog pour le suivi des erreurs, réduisant le temps de résolution moyen.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contribution aux décisions produit en collaboration étroite avec les fondateurs.</span></li>
         </ul>
       </li>
 
       <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
         <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
-          <strong class="font-display text-lg md:text-xl">Front-End Developer — <span class="text-[var(--color-accent)]">PUBLIDATA</span></strong>
-          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Jan 2023 – Jul 2023</span>
+          <strong class="font-display text-lg md:text-xl">Développeur Front-End — <span class="text-[var(--color-accent)]">PUBLIDATA</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Jan 2023 – Juil 2023</span>
         </div>
         <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Shipped new React features and reusable components; authored custom hooks to improve maintainability.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Enhanced UI with TailwindCSS; improved mobile experience and reduced bundle size via lazy loading/code-splitting.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Set up Storybook documentation to streamline onboarding; active in code reviews and pair programming.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contributed to a React Native app used by 500+ B2B customers.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Développement de nouvelles fonctionnalités React et composants réutilisables ; création de hooks personnalisés pour améliorer la maintenabilité.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Amélioration de l'UI avec TailwindCSS ; optimisation de l'expérience mobile et réduction de la taille du bundle via lazy loading et code-splitting.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Mise en place de la documentation Storybook pour faciliter l'onboarding ; participation active aux revues de code et pair programming.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Contribution à une application React Native utilisée par plus de 500 clients B2B.</span></li>
         </ul>
       </li>
 
       <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
         <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
-          <strong class="font-display text-lg md:text-xl">Technical Specialist — <span class="text-[var(--color-accent)]">APPLE</span></strong>
-          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Jun 2016 – Dec 2019</span>
+          <strong class="font-display text-lg md:text-xl">Spécialiste Technique — <span class="text-[var(--color-accent)]">APPLE</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Juin 2016 – Déc 2019</span>
         </div>
         <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Diagnosed and repaired complex hardware/software issues at scale; trained new technicians.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Delivered 500+ advanced diagnostics and repairs per year; maintained high service quality.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Diagnostic et réparation de problèmes matériels/logiciels complexes à grande échelle ; formation de nouveaux techniciens.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Plus de 500 diagnostics avancés et réparations par an ; maintien d'une qualité de service élevée.</span></li>
         </ul>
       </li>
     </ul>
   </Section>
 
-  <Section id="education" title="Education">
+  <Section id="education" title="Formation">
     <ul class="space-y-6">
       <li class="relative p-5 md:p-6 bg-[var(--color-bg-secondary)] rounded-lg border-2 border-[var(--color-border-light)] hover:border-[var(--color-accent)] transition-colors duration-200">
         <div class="absolute top-0 left-0 w-1 h-16 bg-[var(--color-accent)] rounded-tl-lg"></div>
         <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
-          <strong class="font-display text-lg md:text-xl">Web & Mobile Web Developer Training (JS/React) — <span class="text-[var(--color-accent)]">O'Clock</span></strong>
-          <span class="font-mono text-xs text-[var(--color-text-secondary)]">May 2022 – Oct 2022</span>
+          <strong class="font-display text-lg md:text-xl">Formation Développeur Web & Mobile (JS/React) — <span class="text-[var(--color-accent)]">O'Clock</span></strong>
+          <span class="font-mono text-xs text-[var(--color-text-secondary)]">Mai 2022 – Oct 2022</span>
         </div>
         <ul class="space-y-2.5 md:space-y-3 font-mono text-xs md:text-sm text-[var(--color-text-secondary)]">
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>700+ hours bootcamp covering HTML, CSS, JS, React, accessibility, SEO, Agile, TDD, and documentation.</span></li>
-          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Built a full-stack final project from design to deployment.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Bootcamp de plus de 700 heures couvrant HTML, CSS, JS, React, accessibilité, SEO, Agile, TDD et documentation.</span></li>
+          <li class="flex gap-2.5 md:gap-3"><span class="text-[var(--color-accent)] font-bold shrink-0">→</span><span>Réalisation d'un projet final full-stack de la conception au déploiement.</span></li>
         </ul>
       </li>
     </ul>
@@ -128,24 +128,24 @@ const locale = "en";
 
       <div class="relative z-10">
         <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl mb-5 md:mb-6 leading-tight">
-          <span class="block">Let's work</span>
-          <span class="block text-[var(--color-accent)]">together</span>
+          <span class="block">Travaillons</span>
+          <span class="block text-[var(--color-accent)]">ensemble</span>
         </h2>
         <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] mb-8 md:mb-10 max-w-2xl">
-          <span class="text-[var(--color-accent)]">&gt;</span> Need help building an AI-powered product, automating a workflow, or developing a scalable web application? 
-  I’m available for freelance missions — from rapid prototypes to full production builds.
+          <span class="text-[var(--color-accent)]">&gt;</span> Besoin d'aide pour créer un produit IA, automatiser un workflow ou développer une application web scalable ?
+  Je suis disponible pour des missions freelance — des prototypes rapides aux développements en production complète.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 md:gap-4 items-start">
           <a
-            href="/contact"
+            href="/fr/contact"
             class="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-lg bg-[var(--color-accent)] text-white font-mono font-bold capitalize border-2 border-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] hover:border-[var(--color-accent-dark)] transition-all duration-200 w-full sm:w-auto"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
-            <span>Send message</span>
+            <span>Envoyer un message</span>
           </a>
 
           <div class="flex gap-3 w-full sm:w-auto">

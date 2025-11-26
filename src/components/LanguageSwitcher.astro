@@ -1,0 +1,46 @@
+---
+interface Props {
+  currentLocale: 'en' | 'fr';
+}
+
+const { currentLocale } = Astro.props;
+const url = Astro.url;
+const pathname = url.pathname || "/";
+
+// Remove the /fr prefix to get a neutral path
+let neutralPath = pathname;
+if (neutralPath.startsWith("/fr")) {
+  neutralPath = neutralPath.slice(3) || "/";
+}
+
+// Build URLs for each language
+const enHref = neutralPath === "" ? "/" : neutralPath;
+const frHref = neutralPath === "/" ? "/fr" : `/fr${neutralPath}`;
+---
+
+<nav aria-label="Language selector" class="flex items-center gap-1">
+  <a
+    href={enHref}
+    aria-current={currentLocale === "en" ? "page" : undefined}
+    class:list={[
+      "px-3 py-1.5 rounded-md font-mono text-sm font-semibold uppercase transition-all duration-200",
+      currentLocale === "en"
+        ? "bg-[var(--color-accent)] text-white border-2 border-[var(--color-accent)]"
+        : "border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)]"
+    ]}
+  >
+    EN
+  </a>
+  <a
+    href={frHref}
+    aria-current={currentLocale === "fr" ? "page" : undefined}
+    class:list={[
+      "px-3 py-1.5 rounded-md font-mono text-sm font-semibold uppercase transition-all duration-200",
+      currentLocale === "fr"
+        ? "bg-[var(--color-accent)] text-white border-2 border-[var(--color-accent)]"
+        : "border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)]"
+    ]}
+  >
+    FR
+  </a>
+</nav>

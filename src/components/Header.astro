@@ -1,17 +1,26 @@
 ---
 import { Image } from 'astro:assets';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 
+interface Props {
+  locale?: 'en' | 'fr';
+}
+
+const { locale = 'en' } = Astro.props;
+
+// Build localized links based on current locale
+const localePrefix = locale === 'fr' ? '/fr' : '';
 const links = [
-  { href: "/#about", label: "about" },
-  { href: "/#experiences", label: "work" },
-  { href: "/contact", label: "contact" },
-  { href: "/projects", label: "projects", isHighlight: false }
+  { href: `${localePrefix}/#about`, label: "about" },
+  { href: `${localePrefix}/#experiences`, label: "work" },
+  { href: `${localePrefix}/contact`, label: "contact" },
+  { href: `${localePrefix}/projects`, label: "projects", isHighlight: false }
 ];
 ---
 <header class="mb-12 md:mb-16 border-b-2 border-[var(--color-border-light)] pb-6 md:pb-8 opacity-0 animate-fade-in-up">
   <div class="flex items-center justify-between flex-wrap gap-3 md:gap-4">
     <!-- Logo and Profile -->
-    <a href="/" class="flex items-center gap-3 group relative">
+    <a href={locale === 'fr' ? '/fr' : '/'} class="flex items-center gap-3 group relative">
       <div class="relative">
         <Image
           src="/self-pic-grad.png"
@@ -45,10 +54,15 @@ const links = [
         ))}
       </nav>
 
+      <!-- Language Switcher Desktop -->
+      <div class="ml-2">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
+
       <!-- Theme Toggle Desktop -->
       <button
         id="theme-toggle-desktop"
-        class="ml-2 p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
+        class="p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
         aria-label="Toggle theme"
       >
         <svg id="sun-icon-desktop" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -62,6 +76,11 @@ const links = [
 
     <!-- Mobile Menu Controls -->
     <div class="flex md:hidden items-center gap-2">
+      <!-- Language Switcher Mobile -->
+      <div class="scale-90">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
+
       <!-- Theme Toggle Mobile -->
       <button
         id="theme-toggle-mobile"
