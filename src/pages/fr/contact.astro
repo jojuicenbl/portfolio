@@ -1,12 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 const email = "contact@jorisneblai.xyz";
-const locale = "en";
+const locale = "fr";
 ---
-<BaseLayout title="Contact — Joris Neblai" description="Get in touch with Joris Neblai" locale={locale}>
+<BaseLayout title="Contact — Joris Neblai" description="Contactez Joris Neblai" locale={locale}>
   <Header locale={locale} />
 
   <div class="max-w-3xl mx-auto">
@@ -14,14 +14,14 @@ const locale = "en";
     <div class="mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
       <div class="relative">
         <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
-          <span class="block">Let's</span>
-          <span class="block text-[var(--color-accent)]">talk</span>
+          <span class="block">Discutons</span>
+          <span class="block text-[var(--color-accent)]">ensemble</span>
         </h1>
         <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
       </div>
       <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6">
-        <span class="text-[var(--color-accent)]">&gt;</span> Looking to build an AI-powered feature, automate a workflow, or develop a full-stack application? 
-  Send me a message with a few details about your project — I usually reply within a few hours.
+        <span class="text-[var(--color-accent)]">&gt;</span> Vous souhaitez créer une fonctionnalité IA, automatiser un workflow ou développer une application full-stack ?
+  Envoyez-moi un message avec quelques détails sur votre projet — je réponds généralement en quelques heures.
       </p>
     </div>
 
@@ -38,8 +38,8 @@ const locale = "en";
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 class="font-display text-2xl md:text-3xl font-bold mb-3">Message sent!</h3>
-          <p class="font-mono text-sm text-[var(--color-text-secondary)]">Thank you for reaching out. I'll get back to you soon.</p>
+          <h3 class="font-display text-2xl md:text-3xl font-bold mb-3">Message envoyé !</h3>
+          <p class="font-mono text-sm text-[var(--color-text-secondary)]">Merci de m'avoir contacté. Je vous répondrai bientôt.</p>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ const locale = "en";
         <div class="absolute top-0 left-0 w-20 h-1 bg-[var(--color-accent)] rounded-tl-xl"></div>
         <div>
           <label class="block text-xs font-mono font-semibold mb-3 text-[var(--color-text)] uppercase tracking-wider" for="name">
-            <span class="text-[var(--color-accent)]">&gt;</span> NAME
+            <span class="text-[var(--color-accent)]">&gt;</span> NOM
           </label>
           <input
             id="name"
@@ -66,7 +66,7 @@ const locale = "en";
             minlength="2"
             maxlength="100"
             class="w-full bg-[var(--color-bg)] border-[2px] border-[var(--color-border-light)] px-4 py-3 font-mono text-sm focus:border-[var(--color-accent)] focus:outline-none transition-all"
-            placeholder="Your name"
+            placeholder="Votre nom"
           />
         </div>
 
@@ -80,7 +80,7 @@ const locale = "en";
             type="email"
             required
             class="w-full bg-[var(--color-bg)] border-[2px] border-[var(--color-border-light)] px-4 py-3 font-mono text-sm focus:border-[var(--color-accent)] focus:outline-none transition-all"
-            placeholder="your@email.com"
+            placeholder="votre@email.com"
           />
         </div>
 
@@ -96,7 +96,7 @@ const locale = "en";
             minlength="10"
             maxlength="5000"
             class="w-full bg-[var(--color-bg)] border-[2px] border-[var(--color-border-light)] px-4 py-3 font-mono text-sm focus:border-[var(--color-accent)] focus:outline-none transition-all resize-none"
-            placeholder="Your message..."
+            placeholder="Votre message..."
           ></textarea>
         </div>
 
@@ -113,14 +113,14 @@ const locale = "en";
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <span id="button-text">Send message</span>
+          <span id="button-text">Envoyer le message</span>
         </button>
       </form>
 
       <!-- Alternative Contact Methods -->
       <div class="mt-10 md:mt-12 pt-6 md:pt-8 border-t-2 border-[var(--color-border-light)]">
         <p class="font-mono text-xs text-[var(--color-text-secondary)] mb-5 md:mb-6 text-center">
-          <span class="text-[var(--color-accent)]">&gt;</span> Or connect with me on
+          <span class="text-[var(--color-accent)]">&gt;</span> Ou connectez-vous avec moi sur
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <a
@@ -199,7 +199,7 @@ const locale = "en";
 
     // Update button state
     submitButton.disabled = true;
-    buttonText.textContent = 'Sending...';
+    buttonText.textContent = 'Envoi en cours...';
     sendIcon.classList.add('hidden');
     loadingIcon.classList.remove('hidden');
 
@@ -227,7 +227,7 @@ const locale = "en";
         }, 5000);
       } else {
         // Show error message
-        errorText.textContent = result.error || 'Failed to send message. Please try again.';
+        errorText.textContent = result.error || 'Échec de l\'envoi du message. Veuillez réessayer.';
         errorMessage.classList.remove('hidden');
 
         // Auto-hide error after 5 seconds
@@ -237,7 +237,7 @@ const locale = "en";
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      errorText.textContent = 'Network error. Please check your connection and try again.';
+      errorText.textContent = 'Erreur réseau. Veuillez vérifier votre connexion et réessayer.';
       errorMessage.classList.remove('hidden');
 
       setTimeout(() => {
@@ -246,7 +246,7 @@ const locale = "en";
     } finally {
       // Reset button state
       submitButton.disabled = false;
-      buttonText.textContent = 'Send Message';
+      buttonText.textContent = 'Envoyer le message';
       sendIcon.classList.remove('hidden');
       loadingIcon.classList.add('hidden');
     }
