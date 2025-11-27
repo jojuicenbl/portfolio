@@ -100,10 +100,10 @@ export const projects: Project[] = [
 
 ## Deployment
 
-### Vercel (Recommended)
+### Netlify (Recommended)
 
 1. Push your code to GitHub
-2. Import your repo on [Vercel](https://vercel.com)
+2. Import your repo on [Netlify](https://netlify.com)
 3. Add environment variables:
    - `PUBLIC_EMAIL=your@email.com`
    - `RESEND_API_KEY=your_resend_api_key`

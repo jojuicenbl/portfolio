@@ -9,7 +9,8 @@ const locale = "fr";
 <BaseLayout title="Contact — Joris Neblai" description="Contactez Joris Neblai" locale={locale}>
   <Header locale={locale} />
 
-  <div class="max-w-3xl mx-auto">
+  <div class="content-width">
+    <div class="max-w-3xl mx-auto">
     <!-- Header Section -->
     <div class="mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
       <div class="relative">
@@ -52,8 +53,8 @@ const locale = "fr";
       </div>
 
       <!-- Form -->
-      <form id="contact-form" class="space-y-5 md:space-y-6 bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-light)] relative opacity-0 animate-fade-in-up delay-400">
-        <div class="absolute top-0 left-0 w-20 h-1 bg-[var(--color-accent)] rounded-tl-xl"></div>
+      <form id="contact-form" class="space-y-5 md:space-y-6 bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-light)] relative opacity-0 animate-fade-in-up delay-400 overflow-hidden">
+        <div class="absolute top-0 left-0 w-20 h-1 bg-[var(--color-accent)]"></div>
         <div>
           <label class="block text-xs font-mono font-semibold mb-3 text-[var(--color-text)] uppercase tracking-wider" for="name">
             <span class="text-[var(--color-accent)]">&gt;</span> NOM
@@ -160,6 +161,7 @@ const locale = "fr";
   </div>
 
   <Footer />
+  </div>
 </BaseLayout>
 
 <style>

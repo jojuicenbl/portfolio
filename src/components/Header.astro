@@ -11,126 +11,120 @@ const { locale = 'en' } = Astro.props;
 // Build localized links based on current locale
 const localePrefix = locale === 'fr' ? '/fr' : '';
 const links = [
-  { href: `${localePrefix}/#about`, label: "about" },
-  { href: `${localePrefix}/#experiences`, label: "work" },
-  { href: `${localePrefix}/contact`, label: "contact" },
-  { href: `${localePrefix}/projects`, label: "projects", isHighlight: false }
+  { href: `${localePrefix}/#work`, label: locale === 'fr' ? 'projets' : 'work' },
+  { href: `${localePrefix}/#services`, label: 'services' },
+  { href: `${localePrefix}/#about`, label: locale === 'fr' ? 'à propos' : 'about' },
+  { href: `${localePrefix}/contact`, label: 'contact' }
 ];
 ---
-<header class="mb-12 md:mb-16 border-b-2 border-[var(--color-border-light)] pb-6 md:pb-8 opacity-0 animate-fade-in-up">
-  <div class="flex items-center justify-between flex-wrap gap-3 md:gap-4">
-    <!-- Logo and Profile -->
-    <a href={locale === 'fr' ? '/fr' : '/'} class="flex items-center gap-3 group relative">
-      <div class="relative">
-        <Image
-          src="/self-pic-grad.png"
-          alt="Joris Neblai"
-          width={48}
-          height={48}
-          class="rounded-md border-2 border-[var(--color-border-light)] group-hover:border-[var(--color-accent)] transition-all duration-200"
-          loading="eager"
-          format="webp"
-          quality={95}
-          densities={[1, 2]}
-        />
-        <div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-sm bg-[var(--color-accent)]"></div>
-      </div>
-      <div>
-        <span class="font-display font-bold text-lg md:text-xl block">Joris Neblai</span>
-        <span class="text-[10px] md:text-xs text-[var(--color-text-secondary)] font-mono">&gt; full-stack dev</span>
-      </div>
-    </a>
+<header class="sticky top-0 left-0 right-0 z-50 mb-12 md:mb-16 opacity-0 animate-fade-in-up transition-all duration-300 border-b border-border-subtle bg-paper/80 backdrop-blur-md">
+  <div class="content-width py-6 md:py-8">
+    <div class="flex items-center justify-between">
+      <!-- Logo and Profile -->
+      <a href={locale === 'fr' ? '/fr' : '/'} class="flex items-center gap-3 group relative">
+        <div class="relative">
+          <Image
+            src="/self-pic-grad.png"
+            alt="Joris Neblai"
+            width={48}
+            height={48}
+            class="rounded-lg border border-border-subtle group-hover:border-accent transition-all duration-200"
+            loading="eager"
+            format="webp"
+            quality={95}
+            densities={[1, 2]}
+          />
+          <div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-full bg-accent"></div>
+        </div>
+        <div>
+          <span class="font-display font-semibold text-lg md:text-xl block">Joris Neblai</span>
+          <span class="text-xs text-secondary font-mono">&gt; freelance dev</span>
+        </div>
+      </a>
 
-    <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center gap-2">
-      <nav class="flex gap-1.5 text-sm font-mono">
-        {links.map(l => (
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-6">
+        <nav class="flex gap-1 text-sm font-body">
+          {links.map(l => (
             <a
               href={l.href}
-              class="px-4 py-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200 capitalize"
+              class="px-4 py-2 rounded-md text-secondary hover:text-primary hover:bg-surface transition-all duration-200 capitalize"
             >
               {l.label}
             </a>
-        ))}
-      </nav>
+          ))}
+        </nav>
 
-      <!-- Language Switcher Desktop -->
-      <div class="ml-2">
-        <LanguageSwitcher currentLocale={locale} />
+        <!-- Utilities: Language + Theme -->
+        <div class="flex items-center gap-2 ml-2 pl-6 border-l border-border-subtle">
+          <!-- Language Switcher Desktop -->
+          <LanguageSwitcher currentLocale={locale} />
+
+          <!-- Theme Toggle Desktop -->
+          <button
+            id="theme-toggle-desktop"
+            class="p-2 rounded-md text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+            aria-label="Toggle theme"
+          >
+            <svg id="sun-icon-desktop" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg id="moon-icon-desktop" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <!-- Theme Toggle Desktop -->
-      <button
-        id="theme-toggle-desktop"
-        class="p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
-        aria-label="Toggle theme"
-      >
-        <svg id="sun-icon-desktop" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="square" stroke-linejoin="miter" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <svg id="moon-icon-desktop" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="square" stroke-linejoin="miter" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-      </button>
+      <!-- Mobile Menu Controls -->
+      <div class="flex md:hidden items-center gap-2">
+        <!-- Theme Toggle Mobile -->
+        <button
+          id="theme-toggle-mobile"
+          class="p-2 rounded-md text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+          aria-label="Toggle theme"
+        >
+          <svg id="sun-icon-mobile" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="moon-icon-mobile" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Burger Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="p-2 rounded-md border border-border-subtle hover:border-border-medium transition-all duration-200"
+          aria-label="Toggle menu"
+        >
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Mobile Menu Controls -->
-    <div class="flex md:hidden items-center gap-2">
-      <!-- Language Switcher Mobile -->
-      <div class="scale-90">
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-6 border-t border-border-subtle flex-col gap-2">
+      {links.map(l => (
+        <a
+          href={l.href}
+          class="px-4 py-3 rounded-md border border-border-subtle hover:border-accent hover:bg-surface transition-all text-center block capitalize font-body text-sm"
+        >
+          {l.label}
+        </a>
+      ))}
+
+      <!-- Language Switcher in Mobile Menu -->
+      <div class="mt-2 pt-4 border-t border-border-subtle flex justify-center">
         <LanguageSwitcher currentLocale={locale} />
       </div>
-
-      <!-- Theme Toggle Mobile -->
-      <button
-        id="theme-toggle-mobile"
-        class="p-2 rounded-md border-2 border-transparent hover:border-[var(--color-border-light)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
-        aria-label="Toggle theme"
-      >
-        <svg id="sun-icon-mobile" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <svg id="moon-icon-mobile" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-      </button>
-
-      <!-- Burger Menu Button -->
-      <button
-        id="mobile-menu-button"
-        class="p-2 rounded-md border-2 border-[var(--color-border-light)] hover:border-[var(--color-border)] transition-all duration-200"
-        aria-label="Toggle menu"
-      >
-        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
+    </nav>
   </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="hidden md:hidden mt-5 pt-5 border-t-2 border-[var(--color-border-light)] flex-col gap-2">
-    {links.map(l => (
-      l.isHighlight ? (
-        <a
-          href={l.href}
-          class="px-4 py-3 rounded-md bg-[var(--color-accent)] text-white font-semibold border-2 border-[var(--color-accent)] text-center block capitalize font-mono text-sm"
-        >
-          {l.label}
-        </a>
-      ) : (
-        <a
-          href={l.href}
-          class="px-4 py-3 rounded-md border-2 border-[var(--color-border-light)] hover:border-[var(--color-border)] hover:bg-[var(--color-bg-secondary)] transition-all text-center block capitalize font-mono text-sm"
-        >
-          {l.label}
-        </a>
-      )
-    ))}
-  </nav>
 </header>
 
 <script>
@@ -200,4 +194,3 @@ const links = [
     });
   });
 </script>
-
