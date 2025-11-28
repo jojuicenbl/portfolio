@@ -17,8 +17,8 @@ const links = [
   { href: `${localePrefix}/contact`, label: 'contact' }
 ];
 ---
-<header class="header-safe-area sticky top-0 left-0 right-0 z-50 mb-12 md:mb-16 opacity-0 animate-fade-in-up transition-all duration-300 border-b border-border-subtle bg-paper/80 backdrop-blur-md">
-  <div class="content-width py-6 md:py-8">
+<header class="sticky top-0 left-0 right-0 z-50 mb-12 md:mb-16 opacity-0 animate-fade-in-up transition-all duration-300 border-b border-border-subtle bg-paper/80 backdrop-blur-md">
+  <div class="content-width header-safe-area pb-6 md:pb-8">
     <div class="flex items-center justify-between">
       <!-- Logo and Profile -->
       <a href={locale === 'fr' ? '/fr' : '/'} class="flex items-center gap-3 group relative">
@@ -197,6 +197,12 @@ const links = [
 
 <style>
   .header-safe-area {
-    padding-top: env(safe-area-inset-top);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 1.5rem);
+  }
+
+  @media (min-width: 768px) {
+    .header-safe-area {
+      padding-top: calc(env(safe-area-inset-top, 0px) + 2rem);
+    }
   }
 </style>
