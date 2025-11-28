@@ -105,9 +105,15 @@ html.dark {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px; /* Offset for sticky header */
+  scroll-padding-top: 20px; /* Minimal offset for mobile */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 120px; /* Offset for sticky header on desktop */
+  }
 }
 
 body {
