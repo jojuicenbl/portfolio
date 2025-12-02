@@ -150,6 +150,10 @@ const links = [
   function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.contains('dark');
+
+    // Add transitioning class
+    html.classList.add('transitioning');
+
     if (isDark) {
       html.classList.remove('dark');
       localStorage.setItem('theme', 'light');
@@ -159,6 +163,11 @@ const links = [
       localStorage.setItem('theme', 'dark');
       updateThemeIcons(true);
     }
+
+    // Remove transitioning class after animation completes
+    setTimeout(() => {
+      html.classList.remove('transitioning');
+    }, 300);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
