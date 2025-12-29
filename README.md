@@ -8,7 +8,6 @@ Modern dark-themed portfolio built with Astro, TypeScript, and TailwindCSS.
 - **Fully responsive** design with burger menu on mobile
 - **Fast static site** generation with Astro
 - **TypeScript** for type safety
-- **Backend contact form** with Resend email API
 - **Social media links** with icons
 - **Profile photo** in header
 - **Smooth animations** without hydration flashes
@@ -19,7 +18,6 @@ Modern dark-themed portfolio built with Astro, TypeScript, and TailwindCSS.
 - **Astro** - Static site generator
 - **TypeScript** - Type-safe development
 - **TailwindCSS** - Utility-first styling
-- **Resend** - Transactional email API
 
 ## Setup
 
@@ -35,14 +33,7 @@ Modern dark-themed portfolio built with Astro, TypeScript, and TailwindCSS.
    Edit `.env` and add:
    ```env
    PUBLIC_EMAIL=your@email.com
-   RESEND_API_KEY=your_resend_api_key_here
    ```
-
-   **Get a Resend API key:**
-   - Sign up at [resend.com](https://resend.com)
-   - Go to API Keys section
-   - Create a new API key
-   - Add it to your `.env` file
 
 3. **Replace profile photo (optional)**
 
@@ -106,7 +97,6 @@ export const projects: Project[] = [
 2. Import your repo on [Netlify](https://netlify.com)
 3. Add environment variables:
    - `PUBLIC_EMAIL=your@email.com`
-   - `RESEND_API_KEY=your_resend_api_key`
 4. Deploy!
 
 ### Netlify
@@ -117,7 +107,6 @@ export const projects: Project[] = [
 4. Publish directory: `dist`
 5. Add environment variables:
    - `PUBLIC_EMAIL=your@email.com`
-   - `RESEND_API_KEY=your_resend_api_key`
 
 ### Cloudflare Pages
 
@@ -145,11 +134,9 @@ export const projects: Project[] = [
 │   │   └── BaseLayout.astro  # Base layout with theme initialization
 │   ├── pages/
 │   │   ├── index.astro       # Home page (About, Experiences, CTA)
-│   │   ├── contact.astro     # Contact page with form
+│   │   ├── contact.astro     # Contact page with links
 │   │   ├── projects/
 │   │   │   └── index.astro   # Projects page
-│   │   └── api/
-│   │       └── contact.ts    # Backend email API endpoint
 │   ├── styles/
 │   │   └── globals.css       # Global styles with dark mode
 │   └── data/
@@ -158,20 +145,6 @@ export const projects: Project[] = [
 ├── .env.example              # Environment variables template
 └── package.json
 ```
-
-## Contact Form
-
-The contact form uses a backend API endpoint that sends emails via Resend:
-
-- **Endpoint**: `/api/contact` (POST)
-- **Validation**: Client-side and server-side
-- **Email service**: Resend
-- **Features**:
-  - Loading state while sending
-  - Success message with animation
-  - Error handling with specific messages
-  - No page reload
-  - Auto-hide messages after 5 seconds
 
 ## License
 
