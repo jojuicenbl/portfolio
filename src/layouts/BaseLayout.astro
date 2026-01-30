@@ -9,8 +9,8 @@ interface Props {
 
 const {
   title = "Joris Neblai — Portfolio",
-  description = "Full-Stack Web Developer",
-  locale = "en"
+  description = "Développeur Web Freelance",
+  locale = "fr"
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -25,8 +25,8 @@ const {
     <meta property="og:image:alt" content="Joris Neblai — Portfolio" />
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Joris Neblai — Full-Stack Web Developer" />
-    <meta property="og:description" content="Portfolio of Joris Neblai, AI-driven development specialist." />
+    <meta property="og:title" content="Joris Neblai — Développeur Web Freelance" />
+    <meta property="og:description" content="Portfolio de Joris Neblai, artisan du web. Sites sur mesure, applications et outils." />
     <meta property="og:url" content="https://jorisneblai.xyz/" />
     <meta property="og:image" content="https://jorisneblai.xyz/self-pic-grad.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,5 +47,20 @@ const {
   </head>
   <body class="antialiased selection:bg-[var(--color-accent)] selection:text-black transition-colors duration-200">
     <slot />
+    <!-- Scrollbar auto-hide script -->
+    <script is:inline>
+      (function() {
+        let scrollTimeout;
+        const html = document.documentElement;
+
+        window.addEventListener('scroll', function() {
+          html.classList.add('is-scrolling');
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(function() {
+            html.classList.remove('is-scrolling');
+          }, 1000);
+        }, { passive: true });
+      })();
+    </script>
   </body>
 </html>

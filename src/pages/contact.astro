@@ -4,9 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const email = "contact@jorisneblai.xyz";
-const locale = "en";
+const locale = "fr";
 ---
-<BaseLayout title="Contact — Joris Neblai" description="Get in touch with Joris Neblai" locale={locale}>
+<BaseLayout title="Contact — Joris Neblai" description="Contactez Joris Neblai" locale={locale}>
   <Header locale={locale} />
 
   <div class="content-width">
@@ -15,21 +15,21 @@ const locale = "en";
     <div class="mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
       <div class="relative">
         <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
-          <span class="block">Let's</span>
-          <span class="block text-[var(--color-accent)]">talk</span>
+          <span class="block">Discutons</span>
+          <span class="block text-[var(--color-accent)]">ensemble</span>
         </h1>
         <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
       </div>
       <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6">
-        <span class="text-[var(--color-accent)]">&gt;</span> Looking to build an AI-powered feature, automate a workflow, or develop a full-stack application?
-        Reach out directly via LinkedIn, GitHub, or email.
+        <span class="text-[var(--color-accent)]">&gt;</span> Besoin d'un site web, d'une application ou d'un outil sur mesure ?
+        Contactez-moi directement via LinkedIn, GitHub ou email.
       </p>
     </div>
 
     <!-- Contact Options -->
     <div class="mt-10 md:mt-12 pt-6 md:pt-8 border-t-2 border-[var(--color-border-light)]">
       <p class="font-mono text-xs text-[var(--color-text-secondary)] mb-5 md:mb-6 text-center">
-        <span class="text-[var(--color-accent)]">&gt;</span> Contact me via
+        <span class="text-[var(--color-accent)]">&gt;</span> Contact direct via
       </p>
       <div class="flex flex-wrap justify-center gap-3">
         <a

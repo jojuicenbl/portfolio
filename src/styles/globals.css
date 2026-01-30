@@ -148,21 +148,34 @@ body::before {
   color: var(--accent-hover);
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - auto-hide on scroll */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+html.is-scrolling {
+  scrollbar-color: var(--border-medium) transparent;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-surface);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-medium);
+  background: transparent;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html.is-scrolling::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
 }
 
