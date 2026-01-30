@@ -12,8 +12,8 @@ export default defineConfig({
   output: 'server',
   adapter: netlify(),
   i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
     routing: {
       prefixDefaultLocale: false,
     },

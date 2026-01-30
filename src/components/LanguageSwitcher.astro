@@ -7,15 +7,15 @@ const { currentLocale } = Astro.props;
 const url = Astro.url;
 const pathname = url.pathname || "/";
 
-// Remove the /fr prefix to get a neutral path
+// Remove the /en prefix to get a neutral path (FR is now default)
 let neutralPath = pathname;
-if (neutralPath.startsWith("/fr")) {
+if (neutralPath.startsWith("/en")) {
   neutralPath = neutralPath.slice(3) || "/";
 }
 
-// Build URLs for each language
-const enHref = neutralPath === "" ? "/" : neutralPath;
-const frHref = neutralPath === "/" ? "/fr" : `/fr${neutralPath}`;
+// Build URLs for each language (FR = default without prefix, EN = with /en prefix)
+const frHref = neutralPath === "" ? "/" : neutralPath;
+const enHref = neutralPath === "/" ? "/en" : `/en${neutralPath}`;
 ---
 
 <nav aria-label="Language selector" class="flex items-center gap-1">

@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import { projects } from "../data/projects";
 
-const locale = "en";
+const locale = "fr";
 
 // Featured projects (first 3)
 const featuredProjects = projects.slice(0, 3);
@@ -20,23 +20,23 @@ const featuredProjects = projects.slice(0, 3);
         <!-- Decorative blob -->
         <div class="blob-bg top-0 -left-20 w-96 h-96 bg-accent opacity-10 -z-10"></div>
 
-        <p class="text-overline mb-6">Freelance Full-Stack Developer & AI Engineer</p>
+        <p class="text-overline mb-6">Artisan du Web Freelance</p>
         <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-tight">
-          Building Intelligent
-          <span class="block text-accent italic">Digital Experiences</span>
+          Des sites web
+          <span class="block text-accent italic">faits main</span>
         </h1>
         <p class="text-lg text-secondary max-w-2xl mb-12 leading-relaxed">
-          I help companies and independent professionals build high-quality websites and web applications, then scale with AI-powered products and robust APIs — from rapid prototypes to production-ready solutions.
+          Je conçois et développe des sites web sur mesure pour les entreprises et indépendants qui veulent se démarquer. Réflexion produit, design soigné, code propre — du premier croquis à la mise en ligne.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#work" class="btn-primary">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
-            View my work
+            Voir mes projets
           </a>
           <a href="/contact" class="btn-secondary">
-            Get in touch
+            Me contacter
           </a>
         </div>
       </div>
@@ -48,10 +48,10 @@ const featuredProjects = projects.slice(0, 3);
     <div class="content-width">
       <div class="mb-12">
         <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">
-          Selected <span class="text-accent italic">Work</span>
+          Projets <span class="text-accent italic">Sélectionnés</span>
         </h2>
         <p class="text-secondary max-w-2xl">
-          A curated selection of recent projects showcasing AI integrations, full-stack development, and scalable solutions.
+          Une sélection de réalisations récentes : sites vitrines, applications web et solutions e-commerce.
         </p>
       </div>
 
@@ -63,7 +63,7 @@ const featuredProjects = projects.slice(0, 3);
 
       <div class="text-center">
         <a href="/projects" class="btn-ghost inline-flex items-center gap-2">
-          View all projects
+          Voir tous les projets
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -77,24 +77,24 @@ const featuredProjects = projects.slice(0, 3);
     <div class="content-width">
       <div class="mb-12">
         <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">
-          What I <span class="text-accent italic">Do</span>
+          Ce que je <span class="text-accent italic">Fais</span>
         </h2>
         <p class="text-secondary max-w-2xl">
-          Comprehensive development services focused on modern technologies and AI-driven solutions.
+          Un accompagnement complet, de la réflexion à la mise en ligne.
         </p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-        <!-- AI Development -->
+        <!-- Web Development -->
         <article class="card-hover">
           <div class="w-12 h-12 text-accent mb-6">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
             </svg>
           </div>
-          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">AI Development</h3>
+          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">Sites Web Sur Mesure</h3>
           <p class="text-sm text-secondary leading-relaxed">
-            Building intelligent agents, RAG pipelines, and LLM integrations with OpenAI, Anthropic, LangChain, and vector databases for production-ready AI applications.
+            Sites vitrines, landing pages et applications web développés avec soin. React, Next.js, Astro, WordPress ou Shopify selon vos besoins. Design unique, performance optimisée.
           </p>
         </article>
 
@@ -102,34 +102,34 @@ const featuredProjects = projects.slice(0, 3);
         <article class="card-hover">
           <div class="w-12 h-12 text-accent mb-6">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-            </svg>
-          </div>
-          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">Full-Stack Development</h3>
-          <p class="text-sm text-secondary leading-relaxed">
-            End-to-end web applications with React, Next.js, Node.js, TypeScript, and modern frameworks. Scalable architectures, clean code, and robust testing.
-          </p>
-        </article>
-
-        <!-- API & Backend -->
-        <article class="card-hover">
-          <div class="w-12 h-12 text-accent mb-6">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
             </svg>
           </div>
-          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">API & Backend</h3>
+          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">Applications & API</h3>
           <p class="text-sm text-secondary leading-relaxed">
-            RESTful and GraphQL APIs with NestJS, FastAPI, Express. Database design, optimization, microservices architecture, and cloud deployment (AWS, Hostinger, Netlify).
+            Développement full-stack avec Node.js, NestJS, FastAPI. Bases de données, intégrations tierces, webhooks et déploiement cloud. Architecture solide et maintenable.
+          </p>
+        </article>
+
+        <!-- Automation & Tools -->
+        <article class="card-hover">
+          <div class="w-12 h-12 text-accent mb-6">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl font-semibold mb-4">Outils & Automatisations</h3>
+          <p class="text-sm text-secondary leading-relaxed">
+            Micro-outils internes, scripts d'automatisation et intégrations IA pour gagner du temps sur les tâches répétitives. Python, LangChain, OpenAI.
           </p>
         </article>
       </div>
 
       <!-- Tech Stack -->
       <div class="card grain-texture">
-        <p class="text-overline mb-4">Core Stack</p>
+        <p class="text-overline mb-4">Stack Principal</p>
         <div class="flex flex-wrap gap-2">
-          {['TypeScript', 'Python', 'React', 'Next.js', 'Vue.js', 'Node.js', 'NestJS', 'Express', 'FastAPI', 'LangChain', 'OpenAI', 'PostgreSQL', 'Docker', 'AWS'].map(tech => (
+          {['TypeScript', 'React', 'Next.js', 'Astro', 'Node.js', 'NestJS', 'Python', 'WordPress', 'Shopify', 'PostgreSQL', 'Docker', 'AWS'].map(tech => (
             <span class="text-xs font-mono px-3 py-1.5 bg-accent-light text-accent rounded-sm">
               {tech}
             </span>
@@ -151,24 +151,24 @@ const featuredProjects = projects.slice(0, 3);
           />
           <div class="flex-1">
             <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">
-              About <span class="text-accent italic">Me</span>
+              À <span class="text-accent italic">Propos</span>
             </h2>
             <div class="space-y-4 text-secondary leading-relaxed">
               <p class="about-preview">
-                I'm a <strong class="text-primary">Freelance Full-Stack Developer & AI Engineer</strong> helping companies build fast, reliable, and intelligent digital products. I specialize in turning ideas into production-ready solutions using <strong class="text-primary">JavaScript/TypeScript</strong>, <strong class="text-primary">Python</strong>, and modern <strong class="text-primary">AI-driven development</strong> workflows.
+                Je suis <strong class="text-primary">Développeur Web Freelance</strong>, passionné par la création de sites et d'applications qui ont du sens. J'accompagne les entreprises et indépendants dans la conception de leur présence en ligne — avec une attention particulière au <strong class="text-primary">design</strong>, à l'<strong class="text-primary">expérience utilisateur</strong> et à la <strong class="text-primary">qualité du code</strong>.
               </p>
 
               <div class="about-expanded" id="about-expanded">
                 <p class="mb-4">
-                  My work spans <strong class="text-primary">AI agents</strong>, <strong class="text-primary">RAG pipelines</strong>, <strong class="text-primary">automated workflows</strong>, and <strong class="text-primary">full-stack web applications</strong>. I integrate tools like OpenAI, Anthropic, LangChain, Ollama, vector databases, and modern cloud deployments to accelerate development without compromising quality.
+                  Mon approche est celle d'un <strong class="text-primary">artisan</strong> : chaque projet est unique, pensé et développé sur mesure. Je travaille principalement avec <strong class="text-primary">React</strong>, <strong class="text-primary">Next.js</strong>, <strong class="text-primary">Node.js</strong> et <strong class="text-primary">TypeScript</strong>, mais je m'adapte aux besoins — WordPress, Shopify, Webflow.
                 </p>
 
                 <p class="mb-4">
-                  I also build performant websites and e-commerce experiences using <strong class="text-primary">WordPress</strong> (custom themes & plugins) and <strong class="text-primary">Shopify</strong> with advanced Liquid customization.
+                  J'ai aussi développé une expertise en <strong class="text-primary">automatisation</strong> et en intégration d'outils IA pour optimiser les workflows et gagner du temps sur les tâches répétitives.
                 </p>
 
                 <p>
-                  Outside of engineering, I'm passionate about music and vinyl collection, always digging for new sounds. I stay active through running and strength training, and I'm constantly experimenting with emerging AI technologies.
+                  En dehors du code, je suis passionné de musique et de vinyles. Je reste actif grâce à la course à pied et la musculation.
                 </p>
               </div>
 
@@ -178,7 +178,7 @@ const featuredProjects = projects.slice(0, 3);
                 aria-expanded="false"
                 aria-controls="about-expanded"
               >
-                <span id="read-more-text">Read more</span>
+                <span id="read-more-text">Lire plus</span>
                 <svg id="chevron-icon" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -195,7 +195,7 @@ const featuredProjects = projects.slice(0, 3);
     <div class="content-width">
       <div class="max-w-4xl mx-auto">
         <h2 class="font-display text-3xl md:text-4xl font-semibold mb-10">
-          <span class="text-accent italic">Work</span> Experience
+          Expérience <span class="text-accent italic">Professionnelle</span>
         </h2>
 
         <div class="space-y-4">
@@ -204,9 +204,9 @@ const featuredProjects = projects.slice(0, 3);
             <button class="accordion-header" data-accordion="exp-0">
               <div class="flex-1 text-left">
                 <h3 class="font-display text-xl md:text-2xl font-semibold mb-1">
-                  Web Developer & AI Automation <span class="text-accent block md:inline">@ Freelance</span>
+                  Développeur Web Freelance <span class="text-accent block md:inline">@ Indépendant</span>
                 </h3>
-                <p class="text-xs font-mono text-tertiary uppercase">Jul 2025 – Present</p>
+                <p class="text-xs font-mono text-tertiary uppercase">Juil 2025 – Présent</p>
               </div>
               <svg class="chevron w-6 h-6 text-tertiary transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -217,51 +217,38 @@ const featuredProjects = projects.slice(0, 3);
                 <ul class="space-y-3 text-sm text-secondary p-6">
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Built custom websites using Next.js, React, Wordpress, Shopify, and Webflow.</span>
+                    <span>Conception et développement de sites web sur mesure (Next.js, React, WordPress, Shopify).</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Developed internal micro-tools to automate operational workflows.</span>
+                    <span>Accompagnement des clients de la réflexion produit jusqu'à la mise en ligne.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Created API and webhook integrations connecting services and platforms.</span>
+                    <span>Développement d'intégrations API et webhooks pour connecter services et plateformes.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Designed AI-powered automations for analysis, generation, and decision workflows.</span>
-                  </li>
-                  <li class="flex gap-3">
-                    <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Optimized processes to reduce manual workload and improve reliability.</span>
+                    <span>Création d'outils d'automatisation pour optimiser les processus métier.</span>
                   </li>
                 </ul>
 
                 <div class="px-6 pb-6">
-                  <p class="text-xs font-mono text-accent uppercase mb-3">Recent Work</p>
+                  <p class="text-xs font-mono text-accent uppercase mb-3">Travaux Récents</p>
                   <ul class="space-y-3 text-sm text-secondary">
                     <li class="flex gap-3">
                       <span class="text-accent font-bold shrink-0">→</span>
-                      <span>Built an AI-driven system scanning public platforms (X, Reddit, Product Hunt…) to detect emerging user needs and early market signals.</span>
+                      <span>Site vitrine moderne et optimisé SEO pour une entreprise locale.</span>
                     </li>
                     <li class="flex gap-3">
                       <span class="text-accent font-bold shrink-0">→</span>
-                      <span>Implemented an automated e-commerce workflow connecting Shopify ↔ PayGreen via API/webhooks.</span>
+                      <span>Workflow e-commerce automatisé connectant Shopify et PayGreen via API/webhooks.</span>
                     </li>
                     <li class="flex gap-3">
                       <span class="text-accent font-bold shrink-0">→</span>
-                      <span>Designed and shipped a modern SEO-optimized website for a local business.</span>
-                    </li>
-                    <li class="flex gap-3">
-                      <span class="text-accent font-bold shrink-0">→</span>
-                      <span>Created AI scripts to accelerate content creation and data processing.</span>
+                      <span>Outil d'analyse de marchés utilisant l'IA pour détecter les opportunités.</span>
                     </li>
                   </ul>
-                </div>
-
-                <div class="px-6 pb-6">
-                  <p class="text-xs font-mono text-accent uppercase mb-3">Builder Mindset</p>
-                  <p class="text-sm text-secondary">I build clean, robust, well-crafted solutions at the intersection of web development, automation, and AI.</p>
                 </div>
               </div>
             </div>
@@ -272,9 +259,9 @@ const featuredProjects = projects.slice(0, 3);
             <button class="accordion-header" data-accordion="exp-1">
               <div class="flex-1 text-left">
                 <h3 class="font-display text-xl md:text-2xl font-semibold mb-1">
-                  Full-Stack Web Developer <span class="text-accent block md:inline">@ HARVY</span>
+                  Développeur Web Full-Stack <span class="text-accent block md:inline">@ HARVY</span>
                 </h3>
-                <p class="text-xs font-mono text-tertiary uppercase">Sept 2023 – Feb 2025</p>
+                <p class="text-xs font-mono text-tertiary uppercase">Sept 2023 – Fév 2025</p>
               </div>
               <svg class="chevron w-6 h-6 text-tertiary transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -285,33 +272,33 @@ const featuredProjects = projects.slice(0, 3);
                 <ul class="space-y-3 text-sm text-secondary p-6">
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Developed and optimized NestJS REST APIs for performance and scalability.</span>
+                    <span>Développement et optimisation d'APIs REST NestJS pour la performance et la scalabilité.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Built a PDF generation service (Puppeteer, pdf-lib, Handlebars) processing 1,000+ documents per month.</span>
+                    <span>Création d'un service de génération de PDF (Puppeteer, pdf-lib, Handlebars) traitant plus de 1 000 documents par mois.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Jest unit and Playwright end-to-end tests reaching ~90% coverage; improved CI quality gates.</span>
+                    <span>Tests unitaires Jest et end-to-end Playwright atteignant ~90% de couverture.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Implemented Datadog for error tracking, reducing average resolution time.</span>
+                    <span>Mise en place de Datadog pour le suivi des erreurs.</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Experience 2 -->
+          <!-- Experience 3 -->
           <div class="accordion-item">
             <button class="accordion-header" data-accordion="exp-2">
               <div class="flex-1 text-left">
                 <h3 class="font-display text-xl md:text-2xl font-semibold mb-1">
-                  Front-End Developer <span class="text-accent block md:inline">@ PUBLIDATA</span>
+                  Développeur Front-End <span class="text-accent block md:inline">@ PUBLIDATA</span>
                 </h3>
-                <p class="text-xs font-mono text-tertiary uppercase">Jan 2023 – Jul 2023</p>
+                <p class="text-xs font-mono text-tertiary uppercase">Jan 2023 – Juil 2023</p>
               </div>
               <svg class="chevron w-6 h-6 text-tertiary transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -322,29 +309,29 @@ const featuredProjects = projects.slice(0, 3);
                 <ul class="space-y-3 text-sm text-secondary p-6">
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Shipped new React features and reusable components; authored custom hooks to improve maintainability.</span>
+                    <span>Développement de nouvelles fonctionnalités React et composants réutilisables.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Enhanced UI with TailwindCSS; improved mobile experience and reduced bundle size via lazy loading.</span>
+                    <span>Amélioration de l'UI avec TailwindCSS et optimisation mobile.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Set up Storybook documentation to streamline onboarding; active in code reviews.</span>
+                    <span>Mise en place de la documentation Storybook.</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Experience 3 -->
+          <!-- Experience 4 -->
           <div class="accordion-item">
             <button class="accordion-header" data-accordion="exp-3">
               <div class="flex-1 text-left">
                 <h3 class="font-display text-xl md:text-2xl font-semibold mb-1">
-                  Technical Specialist <span class="text-accent block md:inline">@ APPLE</span>
+                  Spécialiste Technique <span class="text-accent block md:inline">@ APPLE</span>
                 </h3>
-                <p class="text-xs font-mono text-tertiary uppercase">Jun 2016 – Dec 2019</p>
+                <p class="text-xs font-mono text-tertiary uppercase">Juin 2016 – Déc 2019</p>
               </div>
               <svg class="chevron w-6 h-6 text-tertiary transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -355,11 +342,11 @@ const featuredProjects = projects.slice(0, 3);
                 <ul class="space-y-3 text-sm text-secondary p-6">
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Diagnosed and repaired complex hardware/software issues at scale; trained new technicians.</span>
+                    <span>Diagnostic et réparation de problèmes matériels/logiciels complexes.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="text-accent font-bold shrink-0">→</span>
-                    <span>Delivered 500+ advanced diagnostics and repairs per year; maintained high service quality.</span>
+                    <span>Plus de 500 diagnostics avancés et réparations par an.</span>
                   </li>
                 </ul>
               </div>
@@ -375,16 +362,16 @@ const featuredProjects = projects.slice(0, 3);
     <div class="content-width">
       <div class="max-w-4xl mx-auto">
         <h2 class="font-display text-3xl md:text-4xl font-semibold mb-10">
-          <span class="text-accent italic">Education</span>
+          <span class="text-accent italic">Formation</span>
         </h2>
 
         <div class="accordion-item">
           <button class="accordion-header" data-accordion="edu-1">
             <div class="flex-1 text-left">
               <h3 class="font-display text-xl md:text-2xl font-semibold mb-1">
-                Web & Mobile Developer <span class="text-accent block md:inline">@ O'Clock</span>
+                Développeur Web & Mobile <span class="text-accent block md:inline">@ O'Clock</span>
               </h3>
-              <p class="text-xs font-mono text-tertiary uppercase">May 2022 – Oct 2022</p>
+              <p class="text-xs font-mono text-tertiary uppercase">Mai 2022 – Oct 2022</p>
             </div>
             <svg class="chevron w-6 h-6 text-tertiary transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -395,11 +382,11 @@ const featuredProjects = projects.slice(0, 3);
               <ul class="space-y-3 text-sm text-secondary p-6">
                 <li class="flex gap-3">
                   <span class="text-accent font-bold shrink-0">→</span>
-                  <span>700+ hours bootcamp covering HTML, CSS, JavaScript, React, accessibility, SEO, Agile, TDD.</span>
+                  <span>Bootcamp de plus de 700 heures couvrant HTML, CSS, JavaScript, React, accessibilité, SEO, Agile, TDD.</span>
                 </li>
                 <li class="flex gap-3">
                   <span class="text-accent font-bold shrink-0">→</span>
-                  <span>Built a full-stack final project from design to deployment.</span>
+                  <span>Réalisation d'un projet final full-stack de la conception au déploiement.</span>
                 </li>
               </ul>
             </div>
@@ -417,11 +404,11 @@ const featuredProjects = projects.slice(0, 3);
         <div class="blob-bg -bottom-20 -right-20 w-80 h-80 bg-success"></div>
 
         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 relative z-10">
-          Let's Create <span class="text-accent italic">Together</span>
+          Un projet en <span class="text-accent italic">tête</span> ?
         </h2>
 
         <p class="text-lg text-secondary mb-10 max-w-2xl mx-auto relative z-10">
-          Need help building an AI-powered product, automating a workflow, or developing a scalable web application? I'm available for freelance projects.
+          Besoin d'un site web, d'une application ou d'un outil sur mesure ? Discutons de votre projet.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
@@ -429,7 +416,7 @@ const featuredProjects = projects.slice(0, 3);
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Send message
+            Me contacter
           </a>
 
           <a href="https://linkedin.com/in/joris-neblai" target="_blank" rel="noreferrer" class="btn-secondary">
@@ -518,12 +505,12 @@ const featuredProjects = projects.slice(0, 3);
         if (isExpanded) {
           aboutExpanded.style.display = 'none';
           readMoreBtn.setAttribute('aria-expanded', 'false');
-          readMoreText.textContent = 'Read more';
+          readMoreText.textContent = 'Lire plus';
           chevronIcon.style.transform = 'rotate(0deg)';
         } else {
           aboutExpanded.style.display = 'block';
           readMoreBtn.setAttribute('aria-expanded', 'true');
-          readMoreText.textContent = 'Read less';
+          readMoreText.textContent = 'Lire moins';
           chevronIcon.style.transform = 'rotate(180deg)';
         }
       });

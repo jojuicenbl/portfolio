@@ -6,10 +6,10 @@ interface Props {
   locale?: 'en' | 'fr';
 }
 
-const { locale = 'en' } = Astro.props;
+const { locale = 'fr' } = Astro.props;
 
-// Build localized links based on current locale
-const localePrefix = locale === 'fr' ? '/fr' : '';
+// Build localized links based on current locale (FR is default, EN needs prefix)
+const localePrefix = locale === 'en' ? '/en' : '';
 const links = [
   { href: `${localePrefix}/#work`, label: locale === 'fr' ? 'projets' : 'work' },
   { href: `${localePrefix}/#services`, label: 'services' },
@@ -21,7 +21,7 @@ const links = [
   <div class="content-width py-6 md:py-8">
     <div class="flex items-center justify-between">
       <!-- Logo and Profile -->
-      <a href={locale === 'fr' ? '/fr' : '/'} class="flex items-center gap-3 group relative">
+      <a href={locale === 'en' ? '/en' : '/'} class="flex items-center gap-3 group relative">
         <div class="relative">
           <Image
             src="/self-pic-grad.png"

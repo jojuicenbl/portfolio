@@ -5,22 +5,22 @@ import Footer from "../../components/Footer.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { projects } from "../../data/projects";
 
-const locale = "en";
+const locale = "fr";
 ---
-<BaseLayout title="Projects — Joris Neblai" description="Personal projects by Joris Neblai" locale={locale}>
+<BaseLayout title="Projets — Joris Neblai" description="Projets personnels de Joris Neblai" locale={locale}>
   <Header locale={locale} />
 
   <div class="content-width">
     <div class="mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
       <div class="relative">
         <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
-          <span class="block">My</span>
-          <span class="block text-[var(--color-accent)]">Projects</span>
+          <span class="block">Mes</span>
+          <span class="block text-[var(--color-accent)]">Projets</span>
         </h1>
         <div class="absolute -top-2 -left-2 w-6 h-6 rounded border-2 border-[var(--color-accent)] hidden md:block"></div>
       </div>
       <p class="font-mono text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mt-6">
-        <span class="text-[var(--color-accent)]">&gt;</span> A collection of side projects and experiments. More coming soon.
+        <span class="text-[var(--color-accent)]">&gt;</span> Une collection de projets personnels et d'expérimentations. D'autres à venir.
       </p>
     </div>
 
